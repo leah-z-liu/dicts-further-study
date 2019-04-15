@@ -12,6 +12,16 @@
 # look up rest name
 # format then print rest name and value 
 
+def add_new_rating():
+    """Return new rest and rating from user input"""
+    print("Let's add a new restaurant rating!")
+    restaurant = input("Restaurant name: ")
+    rating = input("Rating (from 1-5): ")
+    # create a restaurant variable by getting input
+    # create rating variable by getting input 
+
+    return [restaurant, rating]
+
 
 # put your code here
 def get_restaurant_ratings(file_name):
@@ -26,6 +36,11 @@ def get_restaurant_ratings(file_name):
             restaurant = line_list[0]
             rating =line_list[1]
             restaurant_ratings[restaurant] = rating
+
+    new_rating = add_new_rating()
+    new_rest = new_rating[0]
+    new_rating = new_rating[1]
+    restaurant_ratings[new_rest] = new_rating
 
     restaurants_list = sorted(restaurant_ratings.keys())
 
