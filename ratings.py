@@ -17,10 +17,18 @@ def add_new_rating():
     print("Let's add a new restaurant rating!")
     restaurant = input("Restaurant name: ")
     rating = input("Rating (from 1-5): ")
+    # make sure rating is int
+    # make sure is within range(1, 5)
+    while (rating.isdigit() == False 
+          or int(rating) < 1 or int(rating) > 5):
+        print("Please enter number between 1 and 5!")
+        rating = input("Rating (from 1-5): ")
+
     # create a restaurant variable by getting input
     # create rating variable by getting input 
 
     return [restaurant, rating]
+
 
 
 # put your code here
